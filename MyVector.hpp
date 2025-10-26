@@ -19,7 +19,7 @@ public:
     void clear(); // Clears all the vector
     void push_front(const T& value); // Insert value at the beginning of the vector (index 0)
     void insert(int pos, const T& value); // Insert value at specified position
-    void erase(int index); // Clears the entire vector
+    void erase(int index); // Erases element from certain index
     void remove_dups(); // Remove duplicates
 
 private:
