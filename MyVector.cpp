@@ -27,15 +27,17 @@ MyVector<T>::MyVector(const MyVector<T>& other) {
     }
 }
 
+// Adds element to last position
 template<typename T>
 void MyVector<T>::push_back(const T& value) {
     if (size >= capacity) {
-        allocate_memory(capacity * 2);
+        allocate_memory(capacity * 2); // doubles capacity when size is equal or bigger
     }
     elements[size] = value;
     size++;
 }
 
+// Removes last element
 template<typename T>
 T MyVector<T>::pop_back(void) {
     if (size > 0) {
@@ -50,16 +52,17 @@ T MyVector<T>::pop_back(void) {
     }
 }
 
+// Prints Vector
 template<typename T>
 void MyVector<T>::print() const {
     std::cout << "[ ";
     for (int i = 0; i < size; i++) {
-        //std::cout << (char) elements[i] << ' ';
         std::cout << elements[i] << ' ';
     }
     std::cout << "]\n"; 
 }
 
+// Allocates new memory when capacity is low
 template<typename T>
 void MyVector<T>::allocate_memory(int memory_size) {
     capacity = memory_size;
@@ -73,6 +76,7 @@ void MyVector<T>::allocate_memory(int memory_size) {
     delete [] old;
 }
 
+// Points at current element
 template<typename T>
 T& MyVector<T>::at(int index) {
     // Check if index is positive or negative
@@ -84,6 +88,7 @@ T& MyVector<T>::at(int index) {
     }
 }
 
+// Clears all elements
 template<typename T>
 void MyVector<T>::clear() {
     // Remove all elements
@@ -93,6 +98,7 @@ void MyVector<T>::clear() {
     elements = new T[capacity];
 }
 
+// Inserts new element to the first position
 template<typename T>
 void MyVector<T>::push_front(const T& value) {
     // Resize if capacity is exceeded
@@ -109,6 +115,7 @@ void MyVector<T>::push_front(const T& value) {
     elements[0] = value;
 }
 
+// Adds element at a certain index
 template<typename T>
 void MyVector<T>::insert(int pos, const T& value) {
     // Resize if capacity is exceeded
@@ -121,7 +128,7 @@ void MyVector<T>::insert(int pos, const T& value) {
         pos = (size + pos) + 1;
     }
 
-    // Move values to the rigth starting from pos
+    // Move values to the right starting from pos
     for (int i = size; i >= pos; i--){
         elements[i] = elements[i-1];
     }
@@ -131,6 +138,7 @@ void MyVector<T>::insert(int pos, const T& value) {
     elements[pos] = value;
 }
 
+// Erases element at a certain index
 template<typename T>
 void MyVector<T>::erase(int index){
     // Support for negative index
@@ -153,6 +161,7 @@ void MyVector<T>::erase(int index){
     }
 }
 
+// Removes duplicates
 template<typename T>
 void MyVector<T>::remove_dups(){
     // Remove duplicate elements
