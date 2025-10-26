@@ -11,7 +11,7 @@ public:
     T getCapacity() const { return capacity;}
     void push_back(const T& value); // Adds element to the last position
     T pop_back(void); // Removes last element
-    void print() const;
+    void print() const; // Prints vector
     T& at(int index); // Modify it to add negative index behavior (i.e -1 = last element, like python)
 
     // New methods
@@ -19,8 +19,8 @@ public:
     void clear(); // Clears all the vector
     void push_front(const T& value); // Insert value at the beginning of the vector (index 0)
     void insert(int pos, const T& value); // Insert value at specified position
-    void erase(int index);
-    void remove_dups();
+    void erase(int index); // Clears the entire vector
+    void remove_dups(); // Remove duplicates
 
 private:
     void allocate_memory(int memory_size);
