@@ -30,5 +30,5 @@ The goal was to strengthen understanding of **object-oriented programming**, **m
 Computer Science Sophomore @ Florida Polytechnic University  
  Concentrations: Software Engineering & Machine Learning  
 Originally developed as part of coursework at Florida Polytechnic University.  
-Expanded independently to include operator overloading in future updates    
+Expanded independently to include operator overloading in future updates.    
  [LinkedIn](https://linkedin.com/in/davidaparraj) | [GitHub](https://github.com/davidaparraj)
