@@ -24,3 +24,9 @@ The goal was to strengthen understanding of **object-oriented programming**, **m
 - Template programming and reusability
 
 ---
+
+## Author
+**David Parra**  
+Computer Science Sophomore @ Florida Polytechnic University  
+ Concentrations: Software Engineering & Machine Learning  
+ [LinkedIn](https://linkedin.com/in/davidaparraj) | [GitHub](https://github.com/davidaparraj)
